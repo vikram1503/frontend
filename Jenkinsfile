@@ -53,19 +53,19 @@ pipeline {
                 }
             }
         }
-        // stage('Deploy'){
-        //     steps{
-        //         script{
-        //         def params = [
-        //             string(name: 'appVersion', value: "${appVersion}")
+        stage('Deploy'){
+            steps{
+                script{
+                def params = [
+                    string(name: 'appVersion', value: "${appVersion}")
 
-        //         ]
+                ]
                 
-        //             build job: 'frontend-deploy', parameters: params, wait: false
-        //         }
-        //     }
+                    build job: 'frontend-deploy', parameters: params, wait: false
+                }
+            }
 
-        // }
+        }
             
 
     }    
