@@ -26,7 +26,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh """
-                zip -q -r frontend-${appVersion}.zip * -x Jenkinsfile -x frontend-${appVersion}.zip
+                zip -q -r frontend-${appVersion}.zip * -x Jenkinsfile -x  *.zip
                 ls -ltr
                 """
             }
